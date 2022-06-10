@@ -1,6 +1,8 @@
 <?php
 
 
+use App\Http\Controllers\Page1;
+use App\Http\Controllers\Page4;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/p4' , [Page4::class , "page4"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
